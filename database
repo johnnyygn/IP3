@@ -1,0 +1,54 @@
+show dbs
+
+db
+
+use
+
+webdev2
+
+db.createCollection('student') 
+
+db.student.insert({
+	username: 'JoshBrown',
+	password: 'password123'
+	email: 'joshbrown@gmail.com'
+})
+
+
+db.student.insert({
+	username: 'timbard',
+	password: 'password789',
+ 	email: 'timbard@gmail.com'
+})
+
+db.student.insert({
+	username: 'Nickcharles',
+	password: 'password456',
+	email: 'nickcharles@gmail.com'
+})
+
+db.createCollection('coursework') 
+
+db.coursework.insert({
+	courserworkid: '1',
+	name:'Web Development coursework 1',
+	module:'WebDevelopment',
+	datedue: '25.05.2020',
+	completiondate:Date()
+})
+
+db.coursework.insert({
+	courserworkid: '2',
+	name:'Database Development coursework1',
+	module:'Database Development',
+	datedue: '23.05.2020',
+	completiondate:Date()
+})
+
+db.coursework.insert({
+	coursework:'3',
+	name:'Human Computer Interaction coursework 1',
+	module:'Human Computer Interaction',
+	datedue:'15.05.2020',
+	completiondate:Date()
+})
