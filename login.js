@@ -1,7 +1,6 @@
 var mysql = require('mysql');
 var express = require('express');
 var session = require('express-session');
-var bodyParser = require('body-parser');
 var path = require('path');
 
 var connection = mysql.createConnection({
@@ -17,8 +16,6 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
-app.use(bodyParser.urlencoded({extended : true}));
-app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/ip3loginpage.html'));
